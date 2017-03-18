@@ -141,11 +141,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 5px 10px;
   color: #fff;
 }
-@media screen and (max-width: 768px) {
-  .l-nav .menu-1 {
-    display: none;
-  }
-}
+
 .l-nav ul {
   padding: 0;
   margin: 7px 0 0 0;
@@ -1275,89 +1271,6 @@ h1, h2, h3, h4, h5, h6, figure {
   display: block;
 }
 
-#l-offcanvas {
-  position: fixed;
-  z-index: 1901;
-  width: 270px;
-  background: black;
-  top: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 45px 40px 40px 40px;
-  overflow-y: auto;
-  display: none;
-  -moz-transform: translateX(270px);
-  -webkit-transform: translateX(270px);
-  -ms-transform: translateX(270px);
-  -o-transform: translateX(270px);
-  transform: translateX(270px);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-@media screen and (max-width: 768px) {
-  #l-offcanvas {
-    display: block;
-  }
-}
-.offcanvas #l-offcanvas {
-  -moz-transform: translateX(0px);
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-  transform: translateX(0px);
-}
-#l-offcanvas a {
-  color: rgba(255, 255, 255, 0.5);
-}
-#l-offcanvas a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-#l-offcanvas ul {
-  padding: 0;
-  margin: 0;
-}
-#l-offcanvas ul li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-#l-offcanvas ul li > ul {
-  padding-left: 20px;
-  display: none;
-}
-#l-offcanvas ul li.offcanvas-has-dropdown > a {
-  display: block;
-  position: relative;
-}
-#l-offcanvas ul li.offcanvas-has-dropdown > a:after {
-  position: absolute;
-  right: 0px;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\e921";
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-#l-offcanvas ul li.offcanvas-has-dropdown.active a:after {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
 
 .uppercase {
   font-size: 14px;
@@ -1402,109 +1315,6 @@ h1, h2, h3, h4, h5, h6, figure {
 .gototop a:hover, .gototop a:active, .gototop a:focus {
   text-decoration: none;
   outline: none;
-}
-
-.l-nav-toggle {
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  text-decoration: none;
-}
-.l-nav-toggle.active i::before, .l-nav-toggle.active i::after {
-  background: #444;
-}
-.l-nav-toggle:hover, .l-nav-toggle:focus, .l-nav-toggle:active {
-  outline: none;
-  border-bottom: none !important;
-}
-.l-nav-toggle i {
-  position: relative;
-  display: inline-block;
-  width: 25px;
-  height: 2px;
-  color: #252525;
-  font: bold 14px/.4 Helvetica;
-  text-transform: uppercase;
-  text-indent: -55px;
-  background: #252525;
-  transition: all .2s ease-out;
-}
-.l-nav-toggle i::before, .l-nav-toggle i::after {
-  content: '';
-  width: 25px;
-  height: 2px;
-  background: #252525;
-  position: absolute;
-  left: 0;
-  transition: all .2s ease-out;
-}
-.l-nav-toggle.l-nav-white > i {
-  color: #fff;
-  background: #fff;
-}
-.l-nav-toggle.l-nav-white > i::before, .l-nav-toggle.l-nav-white > i::after {
-  background: #fff;
-}
-
-.l-nav-toggle i::before {
-  top: -7px;
-}
-
-.l-nav-toggle i::after {
-  bottom: -7px;
-}
-
-.l-nav-toggle:hover i::before {
-  top: -10px;
-}
-
-.l-nav-toggle:hover i::after {
-  bottom: -10px;
-}
-
-.l-nav-toggle.active i {
-  background: transparent;
-}
-
-.l-nav-toggle.active i::before {
-  top: 0;
-  -webkit-transform: rotateZ(45deg);
-  -moz-transform: rotateZ(45deg);
-  -ms-transform: rotateZ(45deg);
-  -o-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-}
-
-.l-nav-toggle.active i::after {
-  bottom: 0;
-  -webkit-transform: rotateZ(-45deg);
-  -moz-transform: rotateZ(-45deg);
-  -ms-transform: rotateZ(-45deg);
-  -o-transform: rotateZ(-45deg);
-  transform: rotateZ(-45deg);
-}
-
-.l-nav-toggle {
-  position: fixed;
-  right: 0px;
-  top: 18px;
-  z-index: 21;
-  padding: 6px 0 0 0;
-  display: block;
-  margin: 0 auto;
-  display: none;
-  height: 44px;
-  width: 44px;
-  z-index: 2001;
-  border-bottom: none !important;
-}
-.scrolled .l-nav-toggle {
-  top: 5px;
-}
-@media screen and (max-width: 768px) {
-  .l-nav-toggle {
-    display: block;
-  }
 }
 
 .btn {

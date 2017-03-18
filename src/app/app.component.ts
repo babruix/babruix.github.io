@@ -1,4 +1,4 @@
-import { Component, trigger, transition, style, animate} from '@angular/core'
+import {Component, trigger, transition, style, animate, AfterViewInit, OnInit} from '@angular/core'
 declare var Waypoint: any
 declare var jQuery: any
 var $:any = jQuery
@@ -22,9 +22,22 @@ var $:any = jQuery
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit, OnInit {
 
   loadCompleted: boolean = false
+
+  ngOnInit() {
+    this.loadCompleted = true
+  }
+
+  ngAfterViewInit() {
+    this.goToTop()
+    this.offCanvasMenu()
+    this.scrollNavBar()
+    this.burgerMenu()
+    this.contentWayPoints()
+    this.counterWayPoint()
+  }
 
   contentWayPoints() {
 
@@ -177,18 +190,5 @@ export class AppComponent {
         $(this.element).addClass('animated')
       }
     } , { offset: '90%' } )
-  }
-
-
-  ngOnInit() {
-    this.loadCompleted = true
-    this.scrollNavBar()
-    this.offCanvasMenu()
-    this.burgerMenu()
-    this.goToTop()
-
-
-    setTimeout(() => this.contentWayPoints(), 0)
-    setTimeout(() => this.counterWayPoint(), 10)
   }
 }
