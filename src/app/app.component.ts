@@ -3,8 +3,6 @@ declare var Waypoint: any
 declare var jQuery: any
 var $:any = jQuery
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,7 +24,7 @@ var $:any = jQuery
 })
 export class AppComponent {
 
-  loadCompleted = false
+  loadCompleted: boolean = false
 
   contentWayPoints() {
 
@@ -56,43 +54,43 @@ export class AppComponent {
 
                   el.removeClass('item-animate')
                 }, k * 50, 'easeInOutExpo')
-              });
+              })
 
             }, 100)
           }
-      } , { offset: '85%' } );
+      } , { offset: '85%' } )
   }
 
   scrollNavBar() {
     $(window).scroll(function () {
       if ($(window).scrollTop() > 50) {
-        $('#page').addClass('scrolled');
-        $('.js-l-nav-toggle').removeClass('l-nav-white');
+        $('#page').addClass('scrolled')
+        $('.js-l-nav-toggle').removeClass('l-nav-white')
       } else {
-        $('#page').removeClass('scrolled');
-        $('.js-l-nav-toggle').addClass('l-nav-white');
+        $('#page').removeClass('scrolled')
+        $('.js-l-nav-toggle').addClass('l-nav-white')
       }
-    });
-    $(window).scroll();
+    })
+    $(window).scroll()
   }
 
   offCanvasMenu() {
 
-    let $page = $('#page');
-    $page.prepend('<div id="l-offcanvas" />');
-    $page.prepend('<a href="#" class="js-l-nav-toggle l-nav-toggle l-nav-white"><i></i></a>');
+    let $page = $('#page')
+    $page.prepend('<div id="l-offcanvas" />')
+    $page.prepend('<a href="#" class="js-l-nav-toggle l-nav-toggle l-nav-white"><i></i></a>')
 
-    const clone1 = $('.menu-1 > ul').clone();
-    let $l = $('#l-offcanvas');
-    $l.append(clone1);
+    const clone1 = $('.menu-1 > ul').clone()
+    let $l = $('#l-offcanvas')
+    $l.append(clone1)
 
-    const clone2 = $('.menu-2 > ul').clone();
-    $l.append(clone2);
+    const clone2 = $('.menu-2 > ul').clone()
+    $l.append(clone2)
 
-    $('#l-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
+    $('#l-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown')
     $l
       .find('li')
-      .removeClass('has-dropdown');
+      .removeClass('has-dropdown')
 
     // Hover dropdown menu on mobile
     $('.offcanvas-has-dropdown').mouseenter(function(){
@@ -100,85 +98,86 @@ export class AppComponent {
       $(this)
         .addClass('active')
         .find('ul')
-        .slideDown(500, 'easeOutExpo');
+        .slideDown(500, 'easeOutExpo')
     }).mouseleave(function(){
 
       $(this)
         .removeClass('active')
         .find('ul')
-        .slideUp(500, 'easeOutExpo');
-    });
+        .slideUp(500, 'easeOutExpo')
+    })
 
     $(window).resize(function(){
-      let $body = $('#page');
+      let $body = $('#page')
 
       if ( $body.hasClass('offcanvas') ) {
-        $body.removeClass('offcanvas');
-        $('.js-l-nav-toggle').removeClass('active');
+        $body.removeClass('offcanvas')
+        $('.js-l-nav-toggle').removeClass('active')
       }
-    });
+    })
   }
 
   burgerMenu() {
 
     $('#page').on('click', '.js-l-nav-toggle', function(event) {
-      const $this = $(this);
+      const $this = $(this)
 
-      let $body = $('#page');
+      let $body = $('#page')
       if ($body.hasClass('overflow offcanvas') ) {
-        $body.removeClass('overflow offcanvas');
+        $body.removeClass('overflow offcanvas')
       } else {
-        $body.addClass('overflow offcanvas');
+        $body.addClass('overflow offcanvas')
       }
 
-      $this.toggleClass('active');
-      event.preventDefault();
-    });
+      $this.toggleClass('active')
+      event.preventDefault()
+    })
   }
 
   goToTop() {
 
     $('.js-gotop').on('click', function(event) {
 
-      event.preventDefault();
+      event.preventDefault()
 
       $('html, body').animate({
         scrollTop: $('html').offset().top
-      }, 500, 'easeInOutExpo');
+      }, 500, 'easeInOutExpo')
 
-      return false;
-    });
+      return false
+    })
 
     $(window).scroll(function() {
 
-      const $win = $(window);
+      const $win = $(window)
       if ($win.scrollTop() > 200) {
-        $('.js-top').addClass('active');
+        $('.js-top').addClass('active')
       } else {
-        $('.js-top').removeClass('active');
+        $('.js-top').removeClass('active')
       }
-    });
+    })
   }
 
-  counter() {
+  static counter() {
     $('.js-counter').countTo({
       formatter: function (value, options) {
-        return value.toFixed(options.decimals);
+        return value.toFixed(options.decimals)
       },
-    });
+    })
   }
 
   counterWayPoint() {
-    if ($('#l-counter').length > 0 ) {
-      let that = this;
-      $('#l-counter').waypoint( function( direction ) {
-        if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-          setTimeout(that.counter , 400);
-          $(this.element).addClass('animated');
-        }
-      } , { offset: '90%' } );
+    let $l = $('#l-counter');
+    if (!$l.length) {
+      return;
     }
-  };
+    $l.waypoint( function( direction ) {
+      if (direction === 'down' && !$(this.element).hasClass('animated') ) {
+        setTimeout(AppComponent.counter , 400)
+        $(this.element).addClass('animated')
+      }
+    } , { offset: '90%' } )
+  }
 
 
   ngOnInit() {
