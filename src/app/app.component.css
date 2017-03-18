@@ -1280,43 +1280,6 @@ h1, h2, h3, h4, h5, h6, figure {
   text-transform: uppercase;
 }
 
-.gototop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.gototop.active {
-  opacity: 1;
-  visibility: visible;
-}
-.gototop a {
-  width: 50px;
-  height: 50px;
-  display: table;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  text-align: center;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-}
-.gototop a i {
-  height: 50px;
-  display: table-cell;
-  vertical-align: middle;
-}
-.gototop a:hover, .gototop a:active, .gototop a:focus {
-  text-decoration: none;
-  outline: none;
-}
-
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
