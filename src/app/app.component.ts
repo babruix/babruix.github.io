@@ -4,6 +4,7 @@ declare var jQuery: any
 var $:any = jQuery
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,17 +31,12 @@ export class AppComponent {
 
   contentWayPoints() {
 
-    $('.animate-box').each(function () {
+    $('.animate-box').waypoint(function (direction) {
 
-      const currentEl = $(this)
-
-      new Waypoint({
-        element: currentEl[0],
-        handler: function (direction) {
-
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
+          if (direction === 'down' && !$(this.element).hasClass('animated-fast')) {
 
             $(this.element).addClass('item-animate')
+
             setTimeout(function () {
 
               $('body .animate-box.item-animate').each(function (k) {
@@ -50,13 +46,13 @@ export class AppComponent {
 
                   const effect = el.data('animate-effect')
                   if (effect === 'fadeIn') {
-                    el.addClass('fadeIn animated')
+                    el.addClass('fadeIn animated-fast')
                   } else if (effect === 'fadeInLeft') {
-                    el.addClass('fadeInLeft animated')
+                    el.addClass('fadeInLeft animated-fast')
                   } else if (effect === 'fadeInRight') {
-                    el.addClass('fadeInRight animated')
+                    el.addClass('fadeInRight animated-fast')
                   } else {
-                    el.addClass('fadeInUp animated')
+                    el.addClass('fadeInUp animated-fast')
                   }
 
                   el.removeClass('item-animate')
@@ -65,15 +61,143 @@ export class AppComponent {
 
             }, 100)
           }
-        },
-        offset: '85%'
-      })
+      } , { offset: '85%' } );
+  }
+
+  scrollNavBar() {
+    if ($(window).scrollTop() > 50) {
+      $('#page').addClass('scrolled');
+      $('.js-l-nav-toggle').removeClass('l-nav-white');
+    } else {
+      $('#page').removeClass('scrolled');
+      $('.js-l-nav-toggle').addClass('l-nav-white');
+    }
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 50) {
+        $('#page').addClass('scrolled');
+        $('.js-l-nav-toggle').removeClass('l-nav-white');
+      } else {
+        $('#page').removeClass('scrolled');
+        $('.js-l-nav-toggle').addClass('l-nav-white');
+      }
     });
   }
 
+  offCanvasMenu() {
+
+    let $page = $('#page');
+    $page.prepend('<div id="l-offcanvas" />');
+    $page.prepend('<a href="#" class="js-l-nav-toggle l-nav-toggle l-nav-white"><i></i></a>');
+
+    const clone1 = $('.menu-1 > ul').clone();
+    let $l = $('#l-offcanvas');
+    $l.append(clone1);
+
+    const clone2 = $('.menu-2 > ul').clone();
+    $l.append(clone2);
+
+    $('#l-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
+    $l
+      .find('li')
+      .removeClass('has-dropdown');
+
+    // Hover dropdown menu on mobile
+    $('.offcanvas-has-dropdown').mouseenter(function(){
+
+      $(this)
+        .addClass('active')
+        .find('ul')
+        .slideDown(500, 'easeOutExpo');
+    }).mouseleave(function(){
+
+      $(this)
+        .removeClass('active')
+        .find('ul')
+        .slideUp(500, 'easeOutExpo');
+    });
+
+    $(window).resize(function(){
+      let $body = $('#page');
+
+      if ( $body.hasClass('offcanvas') ) {
+        $body.removeClass('offcanvas');
+        $('.js-l-nav-toggle').removeClass('active');
+      }
+    });
+  }
+
+  burgerMenu() {
+
+    $('#page').on('click', '.js-l-nav-toggle', function(event) {
+      const $this = $(this);
+
+      let $body = $('#page');
+      if ($body.hasClass('overflow offcanvas') ) {
+        $body.removeClass('overflow offcanvas');
+      } else {
+        $body.addClass('overflow offcanvas');
+      }
+
+      $this.toggleClass('active');
+      event.preventDefault();
+    });
+  }
+
+  goToTop() {
+
+    $('.js-gotop').on('click', function(event) {
+
+      event.preventDefault();
+
+      $('html, body').animate({
+        scrollTop: $('html').offset().top
+      }, 500, 'easeInOutExpo');
+
+      return false;
+    });
+
+    $(window).scroll(function() {
+
+      const $win = $(window);
+      if ($win.scrollTop() > 200) {
+        $('.js-top').addClass('active');
+      } else {
+        $('.js-top').removeClass('active');
+      }
+    });
+  }
+
+  counter() {
+    $('.js-counter').countTo({
+      formatter: function (value, options) {
+        return value.toFixed(options.decimals);
+      },
+    });
+  }
+
+  counterWayPoint() {
+    if ($('#l-counter').length > 0 ) {
+      let that = this;
+      $('#l-counter').waypoint( function( direction ) {
+        if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+          setTimeout(that.counter , 400);
+          $(this.element).addClass('animated');
+        }
+      } , { offset: '90%' } );
+    }
+  };
+
+
   ngOnInit() {
     this.loadCompleted = true
+    this.scrollNavBar()
+    this.offCanvasMenu()
+    this.burgerMenu()
+    this.goToTop()
 
-    setTimeout(() => this.contentWayPoints(), 100)
+
+    setTimeout(() => this.contentWayPoints(), 0)
+    setTimeout(() => this.counterWayPoint(), 10)
   }
 }

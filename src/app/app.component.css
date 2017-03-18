@@ -6,8 +6,33 @@
   font-style: normal;
 }
 
-body {
-  background: #2491F7;
+.animated-fast {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
 }
 
 /* =======================================================
@@ -245,13 +270,13 @@ h1, h2, h3, h4, h5, h6, figure {
   box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.15);
 }
 .scrolled .l-nav a {
-  color: #000;
+  color: #000 !important;
 }
 .scrolled .l-nav ul li a:hover, .scrolled .l-nav ul li a:focus, .scrolled .l-nav ul li a:active {
   color: #F73859 !important;
 }
 .scrolled .l-nav ul li.active a {
-  color: #F73859;
+  color: #F73859 !important;
 }
 .scrolled .l-nav ul li.has-dropdown:hover > a, .scrolled .l-nav ul li.has-dropdown:focus > a {
   color: #F73859;
@@ -1685,8 +1710,8 @@ h1, h2, h3, h4, h5, h6, figure {
   background: url(/assets/images/loader.gif) center no-repeat #fff;
 }
 
-.js .animate-box {
-  opacity: 0;
+.animate-box {
+  opacity: 0 !important;
 }
 
 #l-header-subscribe #email {
