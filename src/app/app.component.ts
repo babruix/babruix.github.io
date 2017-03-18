@@ -10,17 +10,16 @@ var $:any = jQuery
   templateUrl: './app.component.html',
   styles:[
     require('animate.css'),
-    require('icomoon-free-npm/Font/demo-files/demo.css'),
     require('./app.component.css')
   ],
   animations: [
     trigger('fadeInOut', [
       transition('void => *', [
-        style({opacity:0}), //style only for transition transition (after transiton it removes)
-        animate(500, style({opacity:1})) // the new state of the transition(after transiton it removes)
+        style({opacity:0}),
+        animate(500, style({opacity:1}))
       ]),
       transition('* => void', [
-        animate(500, style({opacity:0})) // the new state of the transition(after transiton it removes)
+        animate(500, style({opacity:0}))
       ])
     ])
   ]
@@ -65,14 +64,6 @@ export class AppComponent {
   }
 
   scrollNavBar() {
-    if ($(window).scrollTop() > 50) {
-      $('#page').addClass('scrolled');
-      $('.js-l-nav-toggle').removeClass('l-nav-white');
-    } else {
-      $('#page').removeClass('scrolled');
-      $('.js-l-nav-toggle').addClass('l-nav-white');
-    }
-
     $(window).scroll(function () {
       if ($(window).scrollTop() > 50) {
         $('#page').addClass('scrolled');
@@ -82,6 +73,7 @@ export class AppComponent {
         $('.js-l-nav-toggle').addClass('l-nav-white');
       }
     });
+    $(window).scroll();
   }
 
   offCanvasMenu() {
