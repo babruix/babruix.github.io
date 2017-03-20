@@ -8,7 +8,7 @@ var $:any = jQuery
   templateUrl: './app.component.html',
   styles:[
     require('animate.css'),
-    require('./app.component.css')
+    require('./app.component.scss')
   ],
   animations: [
     trigger('fadeInOut', [
