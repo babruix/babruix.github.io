@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NgHeaderCompoonentComponent } from './ng-header-compoonent/ng-header-compoonent.component';
+import { NgProjectCompoonentComponent } from './ng-project-compoonent/ng-project-compoonent.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgHeaderCompoonentComponent
+    NgHeaderCompoonentComponent,
+    NgProjectCompoonentComponent
   ],
   imports: [
     BrowserModule,
