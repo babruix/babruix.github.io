@@ -1,21 +1,21 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgProjectCompoonentComponent } from './ng-project-compoonent.component';
+import { NgServicesComponent } from './ng-services.component';
 
-describe('NgProjectCompoonentComponent', () => {
-  let component: NgProjectCompoonentComponent;
-  let fixture: ComponentFixture<NgProjectCompoonentComponent>;
+describe('NgServicesComponent', () => {
+  let component: NgServicesComponent;
+  let fixture: ComponentFixture<NgServicesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgProjectCompoonentComponent ]
+      declarations: [ NgServicesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgProjectCompoonentComponent);
+    fixture = TestBed.createComponent(NgServicesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

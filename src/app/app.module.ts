@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NgHeaderCompoonentComponent } from './ng-header-compoonent/ng-header-compoonent.component';
-import { NgProjectCompoonentComponent } from './ng-project-compoonent/ng-project-compoonent.component';
-import { NgServicesCompoonentComponent } from './ng-services-compoonent/ng-services-compoonent.component';
-import { NgTestimonialComponentComponent } from './ng-testimonial-compoonent/ng-testimonial-component.component';
+import { NgHeaderComponent } from './ng-header/ng-header.component';
+import { NgProjectComponent } from './ng-project/ng-project.component';
+import { NgServicesComponent } from './ng-services/ng-services.component';
+import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgHeaderCompoonentComponent,
-    NgProjectCompoonentComponent,
-    NgServicesCompoonentComponent,
-    NgTestimonialComponentComponent
+    NgHeaderComponent,
+    NgProjectComponent,
+    NgServicesComponent,
+    NgTestimonialComponent
   ],
   imports: [
     BrowserModule,
