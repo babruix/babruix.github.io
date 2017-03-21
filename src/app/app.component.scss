@@ -354,56 +354,6 @@
   }
 }
 
-#l-counter {
-  background: #fff;
-  padding: 7em 0;
-  text-align: center;
-  .counter {
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: #F73859;
-    font-weight: 100;
-    display: block;
-  }
-  .counter-label {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.5);
-    letter-spacing: .1em;
-  }
-  .feature-center:hover .counter {
-    color: #fff;
-  }
-  .icon {
-    width: 70px;
-    text-align: center;
-    margin-bottom: 20px;
-    background: none !important;
-    border: none !important;
-    i {
-      height: 70px;
-      &:before {
-        color: #cccccc;
-        display: block;
-        text-align: center;
-        margin-left: 3px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #l-counter {
-    padding: 3em 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #l-counter .feature-center {
-    margin-bottom: 30px;
-  }
-}
-
 //colors
 $black_70: rgba(0, 0, 0, 0.7);
 $white_50: rgba(255, 255, 255, 0.5);
@@ -693,6 +643,7 @@ $url_0: url(/assets/images/loader.gif);
     display: block;
   }
 }
+
 .uppercase {
   font-size: 14px;
   color: $black;

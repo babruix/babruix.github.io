@@ -8,6 +8,7 @@ import { NgHeaderComponent } from './ng-header/ng-header.component';
 import { NgProjectComponent } from './ng-project/ng-project.component';
 import { NgServicesComponent } from './ng-services/ng-services.component';
 import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component';
+import { NgCounterComponent } from './ng-counter/ng-counter.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.componen
     NgHeaderComponent,
     NgProjectComponent,
     NgServicesComponent,
-    NgTestimonialComponent
+    NgTestimonialComponent,
+    NgCounterComponent
   ],
   imports: [
     BrowserModule,
