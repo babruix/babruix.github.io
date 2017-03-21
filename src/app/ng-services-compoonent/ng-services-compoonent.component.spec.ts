@@ -1,21 +1,21 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgHeaderCompoonentComponent } from './ng-header-compoonent.component';
+import { NgServicesCompoonentComponent } from './ng-services-compoonent.component';
 
-describe('NgHeaderCompoonentComponent', () => {
-  let component: NgHeaderCompoonentComponent;
-  let fixture: ComponentFixture<NgHeaderCompoonentComponent>;
+describe('NgServicesCompoonentComponent', () => {
+  let component: NgServicesCompoonentComponent;
+  let fixture: ComponentFixture<NgServicesCompoonentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgHeaderCompoonentComponent ]
+      declarations: [ NgServicesCompoonentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgHeaderCompoonentComponent);
+    fixture = TestBed.createComponent(NgServicesCompoonentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
