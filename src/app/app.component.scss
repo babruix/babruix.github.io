@@ -61,179 +61,6 @@
   content: "";
 }
 
-.l-nav {
-  position: fixed;
-  top: 0;
-  margin: 0;
-  width: 100%;
-  padding: 25px 0;
-  z-index: 1001;
-  background: transparent;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  #l-logo {
-    font-size: 23px;
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    a > span {
-      color: #F73859;
-    }
-  }
-  a {
-    padding: 5px 10px;
-    color: #fff;
-  }
-  ul {
-    padding: 0;
-    margin: 7px 0 0 0;
-    li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      display: inline;
-      a {
-        font-size: 16px;
-        padding: 30px 10px 3px;
-        color: rgba(255, 255, 255, 0.5);
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-        &:hover, &:focus, &:active {
-          color: white;
-          border-bottom: 1px solid red;
-          text-decoration: none;
-        }
-      }
-      &.has-dropdown {
-        position: relative;
-        .dropdown {
-          width: 130px;
-          -webkit-box-shadow: 0px 8px 13px -9px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0px 8px 13px -9px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 8px 13px -9px rgba(0, 0, 0, 0.75);
-          z-index: 1002;
-          visibility: hidden;
-          opacity: 0;
-          position: absolute;
-          top: 40px;
-          left: 0;
-          text-align: left;
-          background: #fff;
-          padding: 20px;
-          -webkit-border-radius: 4px;
-          -moz-border-radius: 4px;
-          -ms-border-radius: 4px;
-          border-radius: 4px;
-          -webkit-transition: 0s;
-          -o-transition: 0s;
-          transition: 0s;
-          &:before {
-            bottom: 100%;
-            left: 40px;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-bottom-color: #fff;
-            border-width: 8px;
-            margin-left: -8px;
-          }
-          li {
-            display: block;
-            margin-bottom: 7px;
-            &:last-child {
-              margin-bottom: 0;
-            }
-            a {
-              padding: 2px 0;
-              display: block;
-              color: #999999;
-              line-height: 1.2;
-              text-transform: none;
-              font-size: 15px;
-              &:hover {
-                color: #000;
-              }
-            }
-          }
-        }
-        &:hover a, &:focus a {
-          color: #fff;
-        }
-      }
-      &.btn-cta a {
-        color: #F73859;
-        span {
-          background: #f35f55;
-          color: #fff;
-          padding: 4px 20px;
-          display: -moz-inline-stack;
-          display: inline-block;
-          zoom: 1;
-          *display: inline;
-          -webkit-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s;
-          -webkit-border-radius: 4px;
-          -moz-border-radius: 4px;
-          -ms-border-radius: 4px;
-          border-radius: 4px;
-        }
-        &:hover span {
-          background: #f14034 !important;
-          -webkit-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
-        }
-      }
-      &.active > a {
-        color: #fff;
-        position: relative;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .l-nav {
-    padding: 25px 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .l-nav #l-logo {
-    margin-bottom: 0;
-  }
-}
-
-.scrolled .l-nav {
-  background: #fff;
-  padding: 10px 0;
-  -webkit-box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.15);
-  a {
-    color: #000 !important;
-  }
-  ul li a:hover,
-  ul li a:focus,
-  ul li a:active {
-    color: #F73859 !important;
-  }
-  ul li.active a {
-    color: #F73859 !important;
-  }
-  ul li.has-dropdown:hover > a,
-  ul li.has-dropdown:focus > a {
-    color: #F73859;
-  }
-}
-
 #l-header,
 #l-counter,
 .l-bg {
@@ -249,80 +76,6 @@
   position: relative;
   width: 100%;
   float: left;
-  position: relative;
-}
-
-#l-header a {
-  color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  &:hover {
-    color: white;
-    border-bottom: 1px solid white;
-  }
-}
-
-.l-cover {
-  height: 900px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  float: left;
-  width: 100%;
-  .overlay {
-    z-index: 0;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(42, 51, 86, 0.9);
-  }
-  > .l-container {
-    position: relative;
-    z-index: 10;
-  }
-  .display-t,
-  .display-tc {
-    z-index: 9;
-    height: 900px;
-    display: table;
-    width: 100%;
-  }
-  &.l-cover-sm {
-    height: 600px;
-    .display-t,
-    .display-tc {
-      height: 600px;
-      display: table;
-      width: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .l-cover {
-    height: 600px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .l-cover .display-t,
-  .l-cover .display-tc {
-    height: 600px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .l-cover.l-cover-sm {
-    height: 400px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .l-cover.l-cover-sm .display-t,
-  .l-cover.l-cover-sm .display-tc {
-    height: 400px;
-  }
 }
 
 .l-staff {
@@ -502,14 +255,9 @@
     border: none !important;
     font-size: 18px;
     text-transform: uppercase;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
     border-radius: 4px;
     &:hover {
       background: #f6163c !important;
-      -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-      -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
       box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
     }
   }
@@ -597,9 +345,6 @@
         img {
           width: 60px;
           margin-right: 20px;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          -ms-border-radius: 50%;
           border-radius: 50%;
         }
         cite {
@@ -626,8 +371,6 @@
     &.l-selected {
       background: #F73859;
       bottom: 10px;
-      -webkit-box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
       p {
         color: #fff;

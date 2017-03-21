@@ -1,4 +1,4 @@
-import {Component, trigger, transition, style, animate, AfterViewInit, OnInit} from '@angular/core'
+import {Component, trigger, transition, style, animate, AfterViewInit, OnInit, ViewEncapsulation} from '@angular/core'
 declare var Waypoint: any
 declare var jQuery: any
 var $:any = jQuery
@@ -20,7 +20,8 @@ var $:any = jQuery
         animate(500, style({opacity:0}))
       ])
     ])
-  ]
+  ],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewInit, OnInit {
 
