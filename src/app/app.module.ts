@@ -9,6 +9,7 @@ import { NgProjectComponent } from './ng-project/ng-project.component';
 import { NgServicesComponent } from './ng-services/ng-services.component';
 import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component';
 import { NgCounterComponent } from './ng-counter/ng-counter.component';
+import { NgfooterComponent } from './ngfooter/ngfooter.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { NgCounterComponent } from './ng-counter/ng-counter.component';
     NgProjectComponent,
     NgServicesComponent,
     NgTestimonialComponent,
-    NgCounterComponent
+    NgCounterComponent,
+    NgfooterComponent
   ],
   imports: [
     BrowserModule,
