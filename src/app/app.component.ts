@@ -37,7 +37,6 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.scrollNavBar()
     this.burgerMenu()
     this.contentWayPoints()
-    this.counterWayPoint()
   }
 
   contentWayPoints() {
@@ -172,24 +171,4 @@ export class AppComponent implements AfterViewInit, OnInit {
     })
   }
 
-  static counter() {
-    $('.js-counter').countTo({
-      formatter: function (value, options) {
-        return value.toFixed(options.decimals)
-      },
-    })
-  }
-
-  counterWayPoint() {
-    let $l = $('#l-counter');
-    if (!$l.length) {
-      return;
-    }
-    $l.waypoint( function( direction ) {
-      if (direction === 'down' && !$(this.element).hasClass('animated') ) {
-        setTimeout(AppComponent.counter , 400)
-        $(this.element).addClass('animated')
-      }
-    } , { offset: '90%' } )
-  }
 }
