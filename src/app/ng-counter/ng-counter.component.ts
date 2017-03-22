@@ -1,5 +1,4 @@
 import {Component, OnInit, AfterViewInit} from '@angular/core';
-declare var jQuery: any
 var $:any = jQuery
 
 @Component({

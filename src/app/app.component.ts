@@ -32,7 +32,6 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    this.goToTop()
     this.offCanvasMenu()
     this.scrollNavBar()
     this.burgerMenu()
@@ -144,30 +143,6 @@ export class AppComponent implements AfterViewInit, OnInit {
 
       $this.toggleClass('active')
       event.preventDefault()
-    })
-  }
-
-  goToTop() {
-
-    $('.js-gotop').on('click', function(event) {
-
-      event.preventDefault()
-
-      $('html, body').animate({
-        scrollTop: $('html').offset().top
-      }, 500, 'easeInOutExpo')
-
-      return false
-    })
-
-    $(window).scroll(function() {
-
-      const $win = $(window)
-      if ($win.scrollTop() > 200) {
-        $('.js-top').addClass('active')
-      } else {
-        $('.js-top').removeClass('active')
-      }
     })
   }
 

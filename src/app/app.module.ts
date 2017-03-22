@@ -10,6 +10,7 @@ import { NgServicesComponent } from './ng-services/ng-services.component';
 import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component';
 import { NgCounterComponent } from './ng-counter/ng-counter.component';
 import { NgfooterComponent } from './ngfooter/ngfooter.component';
+import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NgfooterComponent } from './ngfooter/ngfooter.component';
     NgServicesComponent,
     NgTestimonialComponent,
     NgCounterComponent,
-    NgfooterComponent
+    NgfooterComponent,
+    NgGotoTopComponent
   ],
   imports: [
     BrowserModule,
