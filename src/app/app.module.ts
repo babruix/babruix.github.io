@@ -9,7 +9,7 @@ import { NgProjectComponent } from './ng-project/ng-project.component';
 import { NgServicesComponent } from './ng-services/ng-services.component';
 import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component';
 import { NgCounterComponent } from './ng-counter/ng-counter.component';
-import { NgfooterComponent } from './ngfooter/ngfooter.component';
+import { NgFooterComponent } from './ng-footer/ng-footer.component';
 import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component';
 
 
@@ -21,7 +21,7 @@ import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component';
     NgServicesComponent,
     NgTestimonialComponent,
     NgCounterComponent,
-    NgfooterComponent,
+    NgFooterComponent,
     NgGotoTopComponent
   ],
   imports: [

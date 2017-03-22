@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { NgfooterComponent } from './ngfooter.component';
+import { NgFooterComponent } from './ng-footer.component';
 
-describe('NgfooterComponent', () => {
-  let component: NgfooterComponent;
-  let fixture: ComponentFixture<NgfooterComponent>;
+describe('NgFooterComponent', () => {
+  let component: NgFooterComponent;
+  let fixture: ComponentFixture<NgFooterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgfooterComponent ]
+      declarations: [ NgFooterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgfooterComponent);
+    fixture = TestBed.createComponent(NgFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
