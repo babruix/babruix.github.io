@@ -7,6 +7,7 @@ var $:any = jQuery
   styleUrls: ['ng-counter.component.scss']
 })
 export class NgCounterComponent implements AfterViewInit {
+
   counterItems = [
     {'icon': 'ti-download', 'range': [0, 12], 'text': 'years'},
     {'icon': 'ti-face-smile', 'range': [0, 20], 'text': 'Happy Clients'},

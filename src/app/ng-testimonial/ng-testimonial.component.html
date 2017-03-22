@@ -8,40 +8,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 animate-box">
-        <div class="testimonial">
-          <blockquote>
-            <p>&ldquo;Great job. Attention to details. Good communication. Superb skill. &rdquo;</p>
-            <p class="author"> <img src="assets/images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
-          </blockquote>
-        </div>
 
-        <div class="testimonial l-selected">
-          <blockquote>
-            <p>&ldquo;Successfully accomplished all tasks which was assigned to him under the very strict project schedule. &rdquo;</p>
-            <p class="author"><img src="assets/images/person2.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Kostya Marchenko</cite></p>
-          </blockquote>
-        </div>
-      </div>
+      <div *ngFor="let row of feedbackItems; let i = index;" class="col-md-6 animate-box">
 
-      <div class="col-md-6 animate-box">
-        <div class="testimonial l-selected">
+        <div *ngFor="let item of row; let ev = even;"
+             [class]="(i == 0 && !ev) || (i > 0 && ev) ? 'testimonial' : 'testimonial l-selected'">
           <blockquote>
-            <p>&ldquo;I would highly recommend him to others and am eager to work with him in the future. &rdquo;</p>
-            <p class="author"><img src="assets/images/person3.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
-          </blockquote>
-        </div>
-
-        <div class="testimonial">
-          <blockquote>
-            <p>&ldquo;He can work on different tasks involving different web technologies and always reach the goals assigned! &rdquo;</p>
-            <p class="author"><img src="assets/images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Dmitri Osler</cite></p>
+            <p>&ldquo;{{item.text}} &rdquo;</p>
+            <p class="author"> <img [src]="item.imageUrl" alt="person"> <cite>&mdash; {{item.name}}</cite></p>
           </blockquote>
         </div>
 
       </div>
-
-
 
     </div>
   </div>
