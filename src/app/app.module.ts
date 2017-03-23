@@ -11,6 +11,7 @@ import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.componen
 import { NgCounterComponent } from './ng-counter/ng-counter.component';
 import { NgFooterComponent } from './ng-footer/ng-footer.component';
 import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component';
+import { NgArrowDownComponent } from './ng-arrow-down/ng-arrow-down.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component';
     NgTestimonialComponent,
     NgCounterComponent,
     NgFooterComponent,
-    NgGotoTopComponent
+    NgGotoTopComponent,
+    NgArrowDownComponent
   ],
   imports: [
     BrowserModule,
