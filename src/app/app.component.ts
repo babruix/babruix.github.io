@@ -32,7 +32,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    this.offCanvasMenu()
+
     this.scrollNavBar()
     this.burgerMenu()
     this.contentWayPoints()
@@ -84,49 +84,6 @@ export class AppComponent implements AfterViewInit, OnInit {
       }
     })
     $(window).scroll()
-  }
-
-  offCanvasMenu() {
-
-    let $page = $('#page')
-    $page.prepend('<div id="l-offcanvas" />')
-    $page.prepend('<a href="#" class="js-l-nav-toggle l-nav-toggle l-nav-white"><i></i></a>')
-
-    const clone1 = $('.menu-1 > ul').clone()
-    let $l = $('#l-offcanvas')
-    $l.append(clone1)
-
-    const clone2 = $('.menu-2 > ul').clone()
-    $l.append(clone2)
-
-    $('#l-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown')
-    $l
-      .find('li')
-      .removeClass('has-dropdown')
-
-    // Hover dropdown menu on mobile
-    $('.offcanvas-has-dropdown').mouseenter(function(){
-
-      $(this)
-        .addClass('active')
-        .find('ul')
-        .slideDown(500, 'easeOutExpo')
-    }).mouseleave(function(){
-
-      $(this)
-        .removeClass('active')
-        .find('ul')
-        .slideUp(500, 'easeOutExpo')
-    })
-
-    $(window).resize(function(){
-      let $body = $('#page')
-
-      if ( $body.hasClass('offcanvas') ) {
-        $body.removeClass('offcanvas')
-        $('.js-l-nav-toggle').removeClass('active')
-      }
-    })
   }
 
   burgerMenu() {
