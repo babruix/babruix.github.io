@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NgHeaderComponent } from './ng-header/ng-header.component';
-import { NgProjectComponent } from './ng-project/ng-project.component';
+import { NgProjectsComponent } from './ng-projects/ng-projects.component';
 import { NgServicesComponent } from './ng-services/ng-services.component';
 import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component';
 import { NgCounterComponent } from './ng-counter/ng-counter.component';
@@ -17,7 +17,7 @@ import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component';
   declarations: [
     AppComponent,
     NgHeaderComponent,
-    NgProjectComponent,
+    NgProjectsComponent,
     NgServicesComponent,
     NgTestimonialComponent,
     NgCounterComponent,
