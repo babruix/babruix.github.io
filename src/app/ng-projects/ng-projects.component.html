@@ -9,31 +9,17 @@
     </div>
 
     <div class="row">
-      <div class="col-md-4 col-sm-6 l-project animate-box" data-animate-effect="fadeIn">
-        <a href="#"><img src="assets/images/work-1.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+
+      <div *ngFor="let item of projectsItems;" class="col-md-4 col-sm-6 l-project animate-box" data-animate-effect="fadeIn">
+        <a href="#"><img src="{{item.imageUrl}}" alt="project" class="img-responsive">
           <div class="l-copy">
-            <h3>Clipboard Office</h3>
-            <p>Web Design</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6 l-project animate-box" data-animate-effect="fadeIn">
-        <a href="#"><img src="assets/images/work-2.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-          <div class="l-copy">
-            <h3>Smart Layers</h3>
-            <p>Brand &amp; Identity</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6 l-project animate-box" data-animate-effect="fadeIn">
-        <a href="#"><img src="assets/images/work-3.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-          <div class="l-copy">
-            <h3>Notepad Mockup</h3>
-            <p>Illustration</p>
+            <h3>{{item.heading}}</h3>
+            <p>{{item.category}}</p>
           </div>
         </a>
       </div>
 
     </div>
+
   </div>
 </div>
