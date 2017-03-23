@@ -10,13 +10,13 @@ export class NgArrowDownComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    var topVal = ($(window).width() < 769) ? 0 : 58;
+    const topVal = ($(window).width() < 769) ? 0 : 58
     $('#down-arrow').click(function(event) {
-      var section = $(this).data('nav-section');
+      var section = $(this).data('nav-section')
 
         $('html, body').animate({
           scrollTop: $('#l-project').offset().top - topVal
-        }, 1000, 'easeInOutExpo');
+        }, 1000, 'easeInOutExpo')
       event.preventDefault();
     });
 
