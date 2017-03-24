@@ -12,6 +12,7 @@ import { NgCounterComponent } from './ng-counter/ng-counter.component';
 import { NgFooterComponent } from './ng-footer/ng-footer.component';
 import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component';
 import { NgArrowDownComponent } from './ng-arrow-down/ng-arrow-down.component';
+import { NgsocialComponent } from './ng-social/ng-social.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { NgArrowDownComponent } from './ng-arrow-down/ng-arrow-down.component';
     NgCounterComponent,
     NgFooterComponent,
     NgGotoTopComponent,
-    NgArrowDownComponent
+    NgArrowDownComponent,
+    NgsocialComponent
   ],
   imports: [
     BrowserModule,
