@@ -4,7 +4,7 @@ declare let $;
 @Component({
   selector: 'app-ng-header-compoonent',
   templateUrl: 'ng-header.component.html',
-  styleUrls: ['ng-header.component.scss', 'bootstrap-social.css'],
+  styleUrls: ['ng-header.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class NgHeaderComponent implements AfterViewInit {
