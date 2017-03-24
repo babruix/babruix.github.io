@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
+import {setTimeout} from "timers";
 declare let $;
 
 @Component({
@@ -12,11 +13,21 @@ export class NgHeaderComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
+
     this.offCanvasMenu()
+
     this.handleMenuClick()
+
+    this.animateNavMenu();
   }
 
-  offCanvasMenu() {
+  private animateNavMenu() {
+    const $navMenu = $('nav .row ul');
+    $navMenu.hide()
+    setTimeout(() => $navMenu.addClass('slideInUp animated').show('fast'), 500)
+  }
+
+  private offCanvasMenu() {
 
     let $page = $('#page')
     $page.prepend('<div id="l-offcanvas" />')
