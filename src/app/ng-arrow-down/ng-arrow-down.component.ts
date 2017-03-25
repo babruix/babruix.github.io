@@ -1,4 +1,4 @@
-import {Component, OnInit, AfterViewInit} from '@angular/core';
+import {Component, AfterViewInit} from '@angular/core';
 
 @Component({
   selector: 'app-ng-arrow-down',
@@ -10,16 +10,6 @@ export class NgArrowDownComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    const topVal = ($(window).width() < 769) ? 0 : 58
-    $('#down-arrow').click(function(event) {
-      var section = $(this).data('nav-section')
-
-        $('html, body').animate({
-          scrollTop: $('#l-project').offset().top - topVal
-        }, 1000, 'easeInOutExpo')
-      event.preventDefault();
-    });
-
     $(window).scroll(function () {
       if ($(window).scrollTop() > 50) {
         $('#down-arrow').hide()
@@ -29,6 +19,10 @@ export class NgArrowDownComponent implements AfterViewInit {
     })
   }
 
-
+  scrollToServices(): void {
+    $('html, body').animate({
+      scrollTop: $('#l-services').offset().top -60
+    }, 1000, 'easeInOutExpo')
+  }
 
 }
