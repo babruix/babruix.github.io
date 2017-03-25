@@ -1,5 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgsocialComponent } from '../ng-social/ng-social.component'
 
 import { NgHeaderComponent } from './ng-header.component';
 
@@ -9,7 +10,10 @@ describe('NgHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgHeaderComponent ]
+      declarations: [
+        NgHeaderComponent,
+        NgsocialComponent,
+      ]
     })
     .compileComponents();
   }));

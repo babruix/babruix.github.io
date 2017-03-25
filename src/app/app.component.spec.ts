@@ -1,17 +1,38 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
+import {TestBed, async} from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NgHeaderComponent } from './ng-header/ng-header.component'
+import { NgServicesComponent } from './ng-services/ng-services.component'
+import { NgProjectsComponent } from './ng-projects/ng-projects.component'
+import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component'
+import { NgCounterComponent } from './ng-counter/ng-counter.component'
+import { NgFooterComponent } from './ng-footer/ng-footer.component'
+import { NgGotoTopComponent } from './ng-goto-top/ng-goto-top.component'
+import { NgArrowDownComponent } from './ng-arrow-down/ng-arrow-down.component'
+import { NgsocialComponent } from './ng-social/ng-social.component'
 
 describe('AppComponent', () => {
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    });
-    TestBed.compileComponents();
-  });
+
+      TestBed.configureTestingModule({
+        declarations: [
+          AppComponent,
+          NgHeaderComponent,
+          NgServicesComponent,
+          NgProjectsComponent,
+          NgTestimonialComponent,
+          NgCounterComponent,
+          NgFooterComponent,
+          NgGotoTopComponent,
+          NgArrowDownComponent,
+          NgsocialComponent,
+        ],
+      });
+      TestBed.compileComponents();
+    }
+  );
 
   it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -19,16 +40,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'yea!!!'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('yea!!!');
-  }));
-
-  it('should render title in a h2 tag', async(() => {
+  it('should render full name in a l-logo', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h2').textContent).toContain('yea!!!');
+    expect(compiled.querySelector('#l-logo a').textContent).toContain('Alexey Romanov.');
   }));
 });
