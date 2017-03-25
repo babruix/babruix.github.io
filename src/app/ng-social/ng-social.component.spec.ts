@@ -1,23 +1,25 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { NgsocialComponent } from '../ng-social/ng-social.component'
 
-import { NgsocialComponent } from './ng-social.component';
+import { NgHeaderComponent } from './ng-header.component';
 
-describe('NgsocialComponent', () => {
-  let component: NgsocialComponent;
-  let fixture: ComponentFixture<NgsocialComponent>;
+describe('NgHeaderComponent', () => {
+  let component: NgHeaderComponent;
+  let fixture: ComponentFixture<NgHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgsocialComponent ]
+      declarations: [
+        NgHeaderComponent,
+        NgsocialComponent,
+      ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgsocialComponent);
+    fixture = TestBed.createComponent(NgHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
