@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NgHeaderComponent } from './ng-header/ng-header.component';
 import { NgProjectsComponent } from './ng-projects/ng-projects.component';
-import { NgServicesComponent } from './ng-services/ng-services.component';
+import { NgSkillsComponent } from './ng-skills/ng-skills.component';
 import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component';
 import { NgCounterComponent } from './ng-counter/ng-counter.component';
 import { NgFooterComponent } from './ng-footer/ng-footer.component';
@@ -20,7 +20,7 @@ import { NgsocialComponent } from './ng-social/ng-social.component';
     AppComponent,
     NgHeaderComponent,
     NgProjectsComponent,
-    NgServicesComponent,
+    NgSkillsComponent,
     NgTestimonialComponent,
     NgCounterComponent,
     NgFooterComponent,

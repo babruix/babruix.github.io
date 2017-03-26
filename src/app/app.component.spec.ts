@@ -3,7 +3,7 @@
 import {TestBed, async} from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NgHeaderComponent } from './ng-header/ng-header.component'
-import { NgServicesComponent } from './ng-services/ng-services.component'
+import { NgSkillsComponent } from './ng-skills/ng-skills.component'
 import { NgProjectsComponent } from './ng-projects/ng-projects.component'
 import { NgTestimonialComponent } from './ng-testimonial/ng-testimonial.component'
 import { NgCounterComponent } from './ng-counter/ng-counter.component'
@@ -20,7 +20,7 @@ describe('AppComponent', () => {
         declarations: [
           AppComponent,
           NgHeaderComponent,
-          NgServicesComponent,
+          NgSkillsComponent,
           NgProjectsComponent,
           NgTestimonialComponent,
           NgCounterComponent,
