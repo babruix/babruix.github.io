@@ -13,6 +13,11 @@ export class NgsocialComponent implements AfterViewInit {
     this.logoAnimate(300)
   }
 
+  gagTrackClick(name) {
+    // _gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-' + name])
+    return true
+  }
+
   private logoAnimate(timeout: number): void {
     timeout = timeout || 300;
     $('#l-logo').hide()

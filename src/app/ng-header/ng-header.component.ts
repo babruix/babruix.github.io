@@ -73,7 +73,7 @@ export class NgHeaderComponent implements AfterViewInit {
   private handleMenuClick() {
     const topVal = ($(window).width() < 769) ? 0 : 58
 
-    $('.l-nav a, #l-offcanvas a').on('click', function (event) {
+    $('.l-nav ul li a, #l-offcanvas a').on('click', function (event) {
       const section = $(this).data('nav-to')
 
       const $sectionDiv = $('#l-' + section + '')
