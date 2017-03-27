@@ -4,21 +4,20 @@
       <div class="col-md-8 col-md-offset-2 text-left animate-box" data-animate-effect="fadeInUp">
         <div class="l-heading">
           <span>Areas of expertise</span>
-          <h2>Services</h2>
+          <h2>Skills</h2>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         </div>
       </div>
     </div>
     <div class="row">
-
       <div *ngFor="let item of skillsItems" class="col-md-4 col-sm-6 ">
         <div class="feature-center animate-box" data-animate-effect="fadeInUp">
-						<span class="icon">
+						<span *ngIf="item.icon" class="icon">
 							<i class="{{item.icon}}"></i>
 						</span>
+            <img *ngIf="item.image" src="/assets/icons/{{item.image}}.svg" />
           <h3>{{item.heading}}</h3>
           <p>{{item.text}}</p>
-          <p><a href="{{item.link}}">Learn more</a></p>
         </div>
       </div>
 
