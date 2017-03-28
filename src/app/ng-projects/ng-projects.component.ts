@@ -8,9 +8,9 @@ import {Component, OnInit, AfterViewInit} from '@angular/core';
 export class NgProjectsComponent   {
 
   projectsItems = [
-    {'imageUrl': 'assets/images/work-1.jpg', 'heading': 'Clipboard Office', 'category': 'Web Design'},
-    {'imageUrl': 'assets/images/work-2.jpg', 'heading': 'Smart Layers', 'category': 'Brand & Identity'},
-    {'imageUrl': 'assets/images/work-3.jpg', 'heading': 'Notepad Mockup', 'category': 'Illustration'},
+    {'imageUrl': 'assets/images/broadcastmedia.png', 'heading': 'Ericsson Broadcast and Media Services', 'category': 'Full Stack Developer'},
+    {'imageUrl': 'assets/images/awave.png', 'heading': 'Awave AB', 'category': 'Technical Lead'},
+    {'imageUrl': 'assets/images/ericsson.jpg', 'heading': 'Ericsson AB', 'category': 'Senior Backend Developer'},
   ]
 
   constructor() { }
