@@ -9,12 +9,42 @@ export class NgSkillsComponent implements OnInit {
 
 
   skillsItems = [
-    {'heading': 'Java', 'image': 'java', 'text': 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', 'link': '#'},
-    {'heading': 'Angular', 'image': 'angular', 'text': 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', 'link': '#'},
-    {'heading': 'Drupal', 'image': 'drupal', 'text': 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', 'link': '#'},
-    {'heading': 'Node.js', 'image': 'node', 'text': 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', 'link': '#'},
-    {'heading': 'Typescript', 'image': 'typescript', 'text': 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', 'link': '#'},
-    {'heading': 'React.js', 'image': 'reactjs', 'text': 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', 'link': '#'},
+    {
+      'heading': 'Java',
+      'image': 'java',
+      'text': 'Java core, Spring, Hibernate, GWT, Play, Tomcat, JUnit',
+      'link': '#'
+    },
+    {
+      'heading': 'Angular',
+      'image': 'angular',
+      'text': 'AngularJS, Angular Cli, Router, Forms, Serives, Directives',
+      'link': '#'
+    },
+    {
+      'heading': 'Drupal',
+      'image': 'drupal',
+      'text': 'Over 7 years working with Drupal. Contributed to Drupal core.',
+      'link': '#'
+    },
+    {
+      'heading': 'Node.js',
+      'image': 'node',
+      'text': 'Express.js, Hapi.js, Meteor, Socket.io',
+      'link': '#'
+    },
+    {
+      'heading': 'Typescript',
+      'image': 'typescript',
+      'text': 'Declarations, modules , generics',
+      'link': '#'
+    },
+    {
+      'heading': 'React.js',
+      'image': 'reactjs',
+      'text': 'Create React App, JSX, RxJS, MobX',
+      'link': '#'
+    },
   ]
 
   constructor() { }
