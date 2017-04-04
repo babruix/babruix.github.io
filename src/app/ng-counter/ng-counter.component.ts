@@ -9,9 +9,9 @@ var $:any = jQuery
 export class NgCounterComponent implements AfterViewInit {
 
   counterItems = [
-    {'icon': 'ti-download', 'range': [0, 12], 'text': 'years'},
+    {'icon': 'ti-download', 'range': [0, 12], 'text': 'years’ experience'},
     {'icon': 'ti-face-smile', 'range': [0, 20], 'text': 'Happy Clients'},
-    {'icon': 'ti-briefcase', 'range': [0, 120], 'text': 'Projects Done'}
+    {'icon': 'ti-briefcase', 'range': [0, 30], 'text': 'Projects Done'}
   ]
 
   constructor() { }
