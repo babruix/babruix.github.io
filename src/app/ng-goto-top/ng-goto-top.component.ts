@@ -3,7 +3,7 @@ import {Component, AfterViewInit} from '@angular/core';
 @Component({
   selector: 'app-ng-goto-top',
   templateUrl: './ng-goto-top.component.html',
-  styleUrls: ['./ng-goto-top.component.sass']
+  styleUrls: ['./ng-goto-top.component.scss']
 })
 export class NgGotoTopComponent implements AfterViewInit {
 
