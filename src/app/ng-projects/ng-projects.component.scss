@@ -78,6 +78,12 @@ $color_radical_red_90_approx: rgba(247, 56, 89, 0.9);
   }
 }
 
+@media (max-width: 767px) {
+  .l-copy h3, .l-copy p {
+    color: $black_70 !important;
+  }
+}
+
 .project-grid {
   background-size: cover;
   background-position: top center;
@@ -134,8 +140,6 @@ $color_radical_red_90_approx: rgba(247, 56, 89, 0.9);
 }
 .project-content {
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
   float: left;
   padding: 7em 0;
   .col-half {
@@ -145,8 +149,7 @@ $color_radical_red_90_approx: rgba(247, 56, 89, 0.9);
     padding-right: 10px;
     .project {
       background-size: cover;
-      background-position: top center;
-      background-repeat: no-repeat;
+      background: no-repeat top center;
       position: relative;
       overflow: hidden;
       height: 800px;
@@ -180,8 +183,7 @@ $color_radical_red_90_approx: rgba(247, 56, 89, 0.9);
     }
     .project-grid {
       background-size: cover;
-      background-position: top center;
-      background-repeat: no-repeat;
+      background: no-repeat top center;
       position: relative;
       overflow: hidden;
       height: 390px;
